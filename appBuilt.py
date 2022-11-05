@@ -6,7 +6,7 @@ import re
 
 
 
-model = pickle.load(open('phishing-link-detection.pickel', 'rb'))
+model = pickle.load(open('phishing-link-detection.pkl', 'rb'))
 cv = pickle.load(open("vector.pickel", "rb"))
 
 @st.cache()
