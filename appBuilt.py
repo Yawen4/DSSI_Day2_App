@@ -3,8 +3,6 @@ import numpy as np
 import pandas as pd
 import pickle
 import re
-# load the model
-
 from nltk.stem.snowball import SnowballStemmer
 
 
