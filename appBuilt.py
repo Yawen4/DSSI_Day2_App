@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 import re
-from nltk.stem.snowball import SnowballStemmer
+
 
 
 model = pickle.load(open('phishing-link-detection.sav', 'rb'))
@@ -16,8 +16,7 @@ def prediction(url):
     url =  re.sub('\.{1,}', ' ', url)
     url = url.split(' ')
     
-    stemmer = SnowballStemmer("english")
-    url = [stemmer.stem(word) for word in url]
+
     url = ' '.join(url)
     
     a_trans = cv.transform(pd.Series(url))
